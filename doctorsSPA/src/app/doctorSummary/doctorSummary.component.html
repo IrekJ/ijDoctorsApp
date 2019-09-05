@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-condensed table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Specialty</th>
+                <th>Average</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of doctors">
+                <td><a [routerLink]="['/detail', d.id]">{{ d.name }}</a></td>
+                <td>{{ d.gender }}</td>
+                <td>{{ d.specialties }}</td>
+                <td>{{ d.average }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

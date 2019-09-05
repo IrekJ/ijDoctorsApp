@@ -1,0 +1,23 @@
+<div class="container" *ngIf="doctor">
+  <div class="card">
+      <div class="card-header">Doctor detail information</div>
+      <div class="card-body">
+      <dl>
+        <dt class="card-subtitle">Name</dt>
+        <dd>{{ doctor.name }}</dd>
+
+        <dt class="card-subtitle">Medical School</dt>
+        <dd>{{ doctor.medicalSchool }}</dd>
+
+        <dt class="card-subtitle">Languages Spoken</dt>
+        <dd>{{ doctor.languages }}</dd>
+
+        <dt class="card-subtitle">Patient Ratings</dt>
+        <dd *ngFor="let r of doctor.patientRatings">
+          Comment: {{ r.comments }} - Rating: {{ r.rating }}
+        </dd>
+      </dl>
+      <a routerLink = "/" class="card-link">Back To Summary</a>
+    </div>
+  </div>
+</div>
